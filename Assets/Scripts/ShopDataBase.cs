@@ -11,7 +11,11 @@ public class ShopDataBase : MonoBehaviour
     public List<ItemObj> _itemObjs = new List<ItemObj>();
     public void Awake()
     {
-        foreach(var itemdata in _consumablesItemList)
+        SetItemObjectList();
+    }
+    public void SetItemObjectList()
+    {
+        foreach (var itemdata in _consumablesItemList)
         {
             _itemObjs.Add(itemdata);
         }

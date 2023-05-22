@@ -1,14 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-//インベントリの何番目のボタンが押されたかの数値を返す
+//インベントリの何番目のボタンが押されたかの数値を各ボタンに持たせる
 public class GetButtonsIndex : MonoBehaviour
 {
     public int _ind = -1;
-    ShopDataBase _sdb;
-    private void Awake()
+    public int _cost = -1;
+    public int returnindex()
     {
-        
+        return _ind;
+    }
+    public int returncost()
+    {
+        return _cost;
     }
 }
