@@ -6,7 +6,7 @@ public class EquipmentObject : ItemObj
 {
     [SerializeField] int _offencivePower;
     [SerializeField] int _diffensivePower;
-
+    [SerializeField] string _equipmentitemName;
     public void Awake()
     {
         _type = ItemType.Equipment;

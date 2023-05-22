@@ -9,8 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a81fb32bade2a418e5a512492c4d62, type: 3}
-  m_Name: New Shop Data Base
+  m_Script: {fileID: 11500000, guid: db422307287eb7f4eaa8383b2dc215e2, type: 3}
+  m_Name: Sowrd
   m_EditorClassIdentifier: 
-  _consumablesItemList: []
-  _equipmentObjects: []
+  _prefab: {fileID: 0}
+  _type: 0
+  _cost: 0
+  description: "\u305F\u3060\u306E\u5263"
+  _itemName: "\u6728\u306E\u5263"
+  _offencivePower: 5
+  _diffensivePower: 0
+  _equipmentitemName: 

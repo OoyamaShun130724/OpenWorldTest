@@ -1,19 +1,37 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [CreateAssetMenu]
-public class Inventory : ScriptableObject
+public class Inventory : MonoBehaviour
 {
+    ShopDataBase _dataBase;
+    [SerializeField] Button _button;
+    [SerializeField] GameObject _inventoryLis;
+    //List<Button> _buttonLis = new List<Button>();
     public List<InventoryItem> inventories = new List<InventoryItem>();
+    public void Start()
+    {
+        _dataBase = GameObject.FindObjectOfType<ShopDataBase>();
+        //for (int i = 0; i < _dataBase._itemObjs.Count; i++)
+        //{
+        //    var tmpitem = Instantiate(_button);
+        //    tmpitem.transform.SetParent(_inventoryLis.transform);
+        //    Text str = tmpitem.GetComponentInChildren<Text>();
+        //    str.text = _dataBase._itemObjs[i].ItemName;
+        //    _buttonLis.Add(tmpitem);          
+        //}
+    }
+
     public void AddItem(ItemObj _getItem, int _count)
     {
         for (int i = 0; i < inventories.Count; i++)
         {
-            if (inventories[i]._haveItem == _getItem)
+            if (inventories[i]._haveItem == _getItem || inventories.Count == 0)
             {
                 inventories[i].CountUp(_count);
                 break;
             }
-            else if (inventories[i]._haveItem != _getItem && i == inventories.Count - 1)
+            else if (i == inventories.Count - 1 && inventories[i]._haveItem != _getItem)
             {
                 inventories.Add(new InventoryItem(_getItem, _count));
             }
@@ -39,9 +57,9 @@ public class InventoryItem
 {
     public ItemObj _haveItem;
     public int _itemCount;
-    public InventoryItem(ItemObj _getItem, int _count)
+    public InventoryItem(ItemObj _Item, int _count)
     {
-        _haveItem = _getItem;
+        _haveItem = _Item;
         _itemCount = _count;
     }
     public void CountUp(int Value)

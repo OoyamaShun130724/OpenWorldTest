@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0162c18ec1d86344ba3b6b0d9122a716, type: 3}
-  m_Name: New Consumable Object
+  m_Name: healItem
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
-  _type: 0
-  _cost: 0
-  description: 
+  _type: 1
+  _cost: 10
+  description: "\u56DE\u5FA9\u30A2\u30A4\u30C6\u30E0"
+  _itemName: "\u30DD\u30FC\u30B7\u30E7\u30F3"
   _healValue: 0
   _powerUpATKValue: 0
   _powerUpDFNValue: 0
