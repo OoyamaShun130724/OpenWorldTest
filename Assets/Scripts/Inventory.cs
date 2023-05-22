@@ -18,7 +18,6 @@ public class Inventory : MonoBehaviour
         //    tmpitem.transform.SetParent(_inventoryLis.transform);
         //    Text str = tmpitem.GetComponentInChildren<Text>();
         //    str.text = _dataBase._itemObjs[i].ItemName;
-        //    _buttonLis.Add(tmpitem);          
         //}
     }
 

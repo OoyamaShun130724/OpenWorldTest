@@ -1,6 +1,6 @@
 using UnityEngine;
 
-//インベントリの何番目のボタンが押されたかの数値を各ボタンに持たせる
+//データベースの何番目のアイテムのボタンが押されたか判定する
 public class GetButtonsIndex : MonoBehaviour
 {
     public int _ind = -1;

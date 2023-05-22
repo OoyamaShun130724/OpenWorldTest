@@ -2150,7 +2150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _consumablesItemList:
   - {fileID: 11400000, guid: f59ba52cabaf0c8448ee6e3257f26f71, type: 2}
-  - {fileID: 11400000, guid: f59ba52cabaf0c8448ee6e3257f26f71, type: 2}
+  - {fileID: 11400000, guid: d5323f27ef227184ea8d590d8b65da77, type: 2}
+  - {fileID: 11400000, guid: dd6a5ff972e212143b565a2b5bf2231f, type: 2}
   _equipmentObjects:
   - {fileID: 11400000, guid: 74561b391571fe3498cd3cea5cdb9b83, type: 2}
   - {fileID: 11400000, guid: 74561b391571fe3498cd3cea5cdb9b83, type: 2}
