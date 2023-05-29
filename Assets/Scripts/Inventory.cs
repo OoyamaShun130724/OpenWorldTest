@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     ShopDataBase _dataBase;
+    ShopButton _gbi;
     [SerializeField] Button _button;
     [SerializeField] GameObject _inventoryLis;
     //List<Button> _buttonLis = new List<Button>();
@@ -19,6 +20,10 @@ public class Inventory : MonoBehaviour
         //    Text str = tmpitem.GetComponentInChildren<Text>();
         //    str.text = _dataBase._itemObjs[i].ItemName;
         //}
+    }
+    public void GenerateButton()
+    {
+      
     }
 
     public void AddItem(ItemObj _getItem, int _count)
