@@ -1,56 +1,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-[CreateAssetMenu]
+using UniRx;
 public class Inventory : MonoBehaviour
 {
     ShopDataBase _dataBase;
-    ShopButton _gbi;
     [SerializeField] Button _button;
     [SerializeField] GameObject _inventoryLis;
-    //List<Button> _buttonLis = new List<Button>();
-    public List<InventoryItem> inventories = new List<InventoryItem>();
+    public List<InventoryItem> _inventories;
+    public Dictionary<int, Button> _buttonDic;
     public void Start()
     {
         _dataBase = GameObject.FindObjectOfType<ShopDataBase>();
-        //for (int i = 0; i < _dataBase._itemObjs.Count; i++)
-        //{
-        //    var tmpitem = Instantiate(_button);
-        //    tmpitem.transform.SetParent(_inventoryLis.transform);
-        //    Text str = tmpitem.GetComponentInChildren<Text>();
-        //    str.text = _dataBase._itemObjs[i].ItemName;
-        //}
+        _buttonDic = new Dictionary<int, Button>();
     }
-    public void GenerateButton()
-    {
-      
-    }
-
     public void AddItem(ItemObj _getItem, int _count)
     {
-        for (int i = 0; i < inventories.Count; i++)
+        for (int i = 0; i < _inventories.Count; i++)
         {
-            if (inventories[i]._haveItem == _getItem || inventories.Count == 0)
+            if (_inventories[i]._haveItem == _getItem || _inventories.Count == 0)
             {
-                inventories[i].CountUp(_count);
+                _inventories[i].CountUp(_count);
                 break;
             }
-            else if (i == inventories.Count - 1 && inventories[i]._haveItem != _getItem)
+            else if (i == _inventories.Count - 1 && _inventories[i]._haveItem != _getItem)
             {
-                inventories.Add(new InventoryItem(_getItem, _count));
+                _inventories.Add(new InventoryItem(_getItem, _count));
             }
         }
     }
     public void usedItem(ItemObj _usedItem)
     {
-        for (int i = 0; i < inventories.Count; i++)
+        for (int i = 0; i < _inventories.Count; i++)
         {
-            if (inventories[i]._haveItem == _usedItem)
+            if (_inventories[i]._haveItem == _usedItem)
             {
-                inventories[i]._itemCount--;
-                if (inventories[i]._itemCount == 0)
+                _inventories[i]._itemCount--;
+                if (_inventories[i]._itemCount == 0)
                 {
-                    inventories.RemoveAt(i);
+                    _inventories.RemoveAt(i);
                 }
             }
         }

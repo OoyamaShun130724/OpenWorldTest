@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: rod
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
-  _type: 0
+  _type: 1
   _cost: 3
   _description: "\u305F\u3060\u306E\u68D2"
   _itemName: "\u305F\u3060\u306E\u68D2"
+  _itemcount: 82
   _healValue: 0
   _powerUpATKValue: 1
   _powerUpDFNValue: 0

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: poisonapple
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
-  _type: 0
-  _cost: 10
+  _type: 1
+  _cost: 300
   _description: "\u98DF\u3079\u308B\u3068\u30C0\u30E1\u30FC\u30B8"
   _itemName: "\u6BD2\u30EA\u30F3\u30B4"
+  _itemcount: 316
   _healValue: -20
   _powerUpATKValue: 0
   _powerUpDFNValue: 0

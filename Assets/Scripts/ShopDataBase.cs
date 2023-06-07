@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu]
 //アイテムショップに並ぶアイテムの配列
 public class ShopDataBase : MonoBehaviour
 {
