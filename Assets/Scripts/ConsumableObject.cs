@@ -11,4 +11,8 @@ public class ConsumableObject : ItemObj
     {
         _type = ItemType.Consumable;
     }
+    public override void UseItem()
+    {
+        Debug.Log("banana");
+    }
 }

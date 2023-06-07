@@ -13,6 +13,17 @@ public class Inventory : MonoBehaviour
     {
         _dataBase = GameObject.FindObjectOfType<ShopDataBase>();
         _buttonDic = new Dictionary<int, Button>();
+        //for (int i = 0; i < _dataBase._itemObjs.Count; i++)
+        //{
+        //    if (_dataBase._itemObjs[i]._itemcount>0)
+        //    {
+        //        var tmpitem = Instantiate(_button);
+        //        tmpitem.transform.SetParent(_inventoryLis.transform);
+        //        _buttonDic.Add(i,tmpitem);
+        //        Text str = tmpitem.GetComponentInChildren<Text>();
+        //        str.text = _dataBase._itemObjs[i].ItemName + "Å~" + _dataBase._itemObjs[i]._itemcount;
+        //    }
+        //}
     }
     public void AddItem(ItemObj _getItem, int _count)
     {

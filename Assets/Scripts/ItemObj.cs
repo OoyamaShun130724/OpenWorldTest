@@ -3,12 +3,13 @@ using UnityEngine;
 public abstract class ItemObj : ScriptableObject
 {
     [SerializeField] GameObject _prefab;
-    [Tooltip("")]public ItemType _type;
-    [Header("値段"),Tooltip("")]　public int _cost;
+    [Tooltip("")] public ItemType _type;
+    [Header("値段"), Tooltip("")] public int _cost;
     [TextArea(10, 10)] public string _description;
     [SerializeField] string _itemName;
-    public int _itemcount =0;
+    public int _itemcount = 0;
     public string ItemName => _itemName;
+    public abstract void UseItem();
 }
 public enum ItemType
 {
@@ -16,3 +17,4 @@ public enum ItemType
     Consumable,//消費型
     //Passive
 }
+

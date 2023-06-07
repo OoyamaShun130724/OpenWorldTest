@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 8317251415350076935}
   - component: {fileID: 8560137002624006648}
   - component: {fileID: 246931836928243462}
+  - component: {fileID: -5854223020448831199}
   m_Layer: 5
   m_Name: InventoryButton
   m_TagString: Untagged
@@ -202,9 +203,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GetButtonsIndex, Assembly-CSharp
-        m_MethodName: Pay
+      - m_Target: {fileID: -5854223020448831199}
+        m_TargetAssemblyTypeName: InventoryButton, Assembly-CSharp
+        m_MethodName: PickItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -214,3 +215,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-5854223020448831199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3604399467971948220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006b1fd55e9cd0e4abb6db8937dec45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: -1
+  str: {fileID: 0}

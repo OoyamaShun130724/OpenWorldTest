@@ -8,6 +8,7 @@ public class ShopButton : MonoBehaviour
     public int _cost = -1;
     public ShopDataBase _shopDataBase;
     public GenerateShopItemList _gsl;
+    InventoryButton _ib;
     [SerializeField] Button _button;
     public void Pay()
     {
@@ -20,6 +21,9 @@ public class ShopButton : MonoBehaviour
                 tmpitem.transform.SetParent(_gsl._InventoryTarget.transform);
                 _inventory._buttonDic.Add(_id, tmpitem);
                 _shopDataBase._itemObjs[_id]._itemcount++;
+                _ib = tmpitem.GetComponent<InventoryButton>();
+                _ib._id = _id;
+                _ib._dataBase = _shopDataBase;
                 Text str = tmpitem.GetComponentInChildren<Text>();
                 str.text = _shopDataBase._itemObjs[_id].ItemName + "Å~" + _shopDataBase._itemObjs[_id]._itemcount;
             }

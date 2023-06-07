@@ -11,4 +11,8 @@ public class EquipmentObject : ItemObj
     {
         _type = ItemType.Equipment;
     }
+    public override void UseItem()
+    {
+        Debug.Log("ninnikumasimasi");
+    }
 }
