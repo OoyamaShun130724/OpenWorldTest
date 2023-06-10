@@ -17,7 +17,7 @@ MonoBehaviour:
   _cost: 10
   _description: 
   _itemName: "\u30DD\u30FC\u30B7\u30E7\u30F3"
-  _itemcount: 430
+  _itemcount: 0
   _healValue: 0
   _powerUpATKValue: 0
   _powerUpDFNValue: 0

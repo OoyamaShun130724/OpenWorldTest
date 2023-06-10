@@ -24,6 +24,7 @@ public class ShopButton : MonoBehaviour
                 _ib = tmpitem.GetComponent<InventoryButton>();
                 _ib._id = _id;
                 _ib._dataBase = _shopDataBase;
+                _ib._inventory = _inventory;
                 Text str = tmpitem.GetComponentInChildren<Text>();
                 str.text = _shopDataBase._itemObjs[_id].ItemName + "Å~" + _shopDataBase._itemObjs[_id]._itemcount;
             }

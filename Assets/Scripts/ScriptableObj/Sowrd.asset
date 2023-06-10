@@ -17,7 +17,7 @@ MonoBehaviour:
   _cost: 100
   _description: 
   _itemName: "\u6728\u306E\u5263"
-  _itemcount: 105
+  _itemcount: 0
   _offencivePower: 5
   _diffensivePower: 0
   _equipmentitemName: 
